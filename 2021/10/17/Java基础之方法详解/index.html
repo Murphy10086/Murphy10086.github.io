@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://localhost:4000">
   <title>Java基础之方法详解 | Murphy的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JAVA 异常分类及处理  异常分类Throwable 是 Java 语言中所有错误或异常的超类。下一层分为 Error 和 Exception Error  Error 类是指 java 运行时系统的内部错误和资源耗尽错误。应用程序不会抛出该类对象。如果 出现了这样的错误，除了告知用户，剩下的就是尽力使程序安全的终止。  Exception （ RuntimeException、CheckedE">
+  <meta name="description" content="JAVA 异常分类及处理 异常分类Throwable 是 Java 语言中所有错误或异常的超类。下一层分为 Error 和 Exception Error  Error 类是指 java 运行时系统的内部错误和资源耗尽错误。应用程序不会抛出该类对象。如果 出现了这样的错误，除了告知用户，剩下的就是尽力使程序安全的终止。  Exception （ RuntimeException、CheckedEx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基础之方法详解">
 <meta property="og:url" content="http://localhost:4000/2021/10/17/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Murphy的个人博客">
-<meta property="og:description" content="JAVA 异常分类及处理  异常分类Throwable 是 Java 语言中所有错误或异常的超类。下一层分为 Error 和 Exception Error  Error 类是指 java 运行时系统的内部错误和资源耗尽错误。应用程序不会抛出该类对象。如果 出现了这样的错误，除了告知用户，剩下的就是尽力使程序安全的终止。  Exception （ RuntimeException、CheckedE">
+<meta property="og:description" content="JAVA 异常分类及处理 异常分类Throwable 是 Java 语言中所有错误或异常的超类。下一层分为 Error 和 Exception Error  Error 类是指 java 运行时系统的内部错误和资源耗尽错误。应用程序不会抛出该类对象。如果 出现了这样的错误，除了告知用户，剩下的就是尽力使程序安全的终止。  Exception （ RuntimeException、CheckedEx">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img.jbzj.com/file_images/article/202107/202107170941396.jpg">
 <meta property="og:image" content="https://img.jbzj.com/file_images/article/202107/202107170941407.jpg">
 <meta property="article:published_time" content="2021-10-17T13:36:59.000Z">
-<meta property="article:modified_time" content="2021-10-17T13:41:25.037Z">
+<meta property="article:modified_time" content="2021-11-01T10:29:38.376Z">
 <meta property="article:author" content="Murphy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img.jbzj.com/file_images/article/202107/202107170941396.jpg">
@@ -177,8 +177,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>JAVA 异常分类及处理</strong></p>
-<p><img src="https://img.jbzj.com/file_images/article/202107/202107170941396.jpg" alt="img"></p>
+        <h1 id="JAVA-异常分类及处理"><a href="#JAVA-异常分类及处理" class="headerlink" title="JAVA 异常分类及处理"></a><strong>JAVA 异常分类及处理</strong></h1><p><img src="https://img.jbzj.com/file_images/article/202107/202107170941396.jpg" alt="img"></p>
 <h2 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h2><p>Throwable 是 Java 语言中所有错误或异常的超类。下一层分为 Error 和 Exception</p>
 <p><strong>Error</strong></p>
 <ol>
@@ -188,7 +187,9 @@
 <ol start="2">
 <li>Exception 又有两个分支，一个是运行时异常 RuntimeException ，一个是 CheckedException。</li>
 </ol>
-<p><strong>RuntimeException</strong> 如 ： NullPointerException 、 ClassCastException ；一个是检查异常 CheckedException，如 I/O 错误导致的 IOException、SQLException。 RuntimeException 是 那些可能在 Java 虚拟机正常运行期间抛出的异常的超类。 如果出现 RuntimeException，那么一 定是程序员的错误. 13/04/2018</p>
+<p><strong>RuntimeException</strong> 如 ： NullPointerException 、 ClassCastException ；一个是检查异常 CheckedException，如 I/O 错误导致的 IOException、SQLException。 RuntimeException 是 那些可能在 Java 虚拟机正常运行期间抛出的异常的超类。 如果出现 RuntimeException，那么一 定是程序员的错误. </p>
+<span id="more"></span>
+
 <p>Page 102 of 283</p>
 <p><strong>检查异常 CheckedException</strong> ：一般是外部错误，这种异常都发生在编译阶段，Java 编译器会强 制程序去捕获此类异常，即会出现要求你把这段可能出现异常的程序进行 try catch，该类异常一 般包括几个方面：</p>
 <ol>
