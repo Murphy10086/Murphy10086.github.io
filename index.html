@@ -152,6 +152,110 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-SpringBoot核心知识点总结，面试再也不怕了" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/01/SpringBoot%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E4%BA%86/">SpringBoot核心知识点总结，面试再也不怕了</a>
+    </h1>
+  
+
+        
+        <a href="/2021/11/01/SpringBoot%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E4%BA%86/" class="archive-article-date">
+  	<time datetime="2021-11-01T09:15:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Spring-Boot-核心功能"><a href="#Spring-Boot-核心功能" class="headerlink" title="Spring Boot 核心功能"></a>Spring Boot 核心功能</h2><p><strong>1、独立运行Spring项目</strong></p>
+<p>Spring boot 可以以jar包形式独立运行，运行一个Spring Boot项目只需要通过java -jar xx.jar来运行。</p>
+<p><strong>2、内嵌servlet容器</strong></p>
+<p>Spring Boot可以选择内嵌Tomcat、jetty或者Undertow,这样我们无须以war包形式部署项目。</p>
+<p><strong>3、提供starter简化Maven配置</strong></p>
+<p>spring提供了一系列的start pom来简化Maven的依赖加载，例如，当你使用了spring-boot-starter-web，会自动加入如图5-1所示的依赖包。</p>
+<p><strong>4、自动装配Spring</strong></p>
+<p>SpringBoot会根据在类路径中的jar包，类、为jar包里面的类自动配置Bean，这样会极大地减少我们要使用的配置。当然，SpringBoot只考虑大多数的开发场景，并不是所有的场景，若在实际开发中我们需要配置Bean，而SpringBoot灭有提供支持，则可以自定义自动配置。</p>
+<p><strong>5、准生产的应用监控</strong></p>
+<p>SpringBoot提供基于http ssh telnet对运行时的项目进行监控。</p>
+<p><strong>6、无代码生产和xml配置</strong>　　</p>
+<p>SpringBoot不是借助与代码生成来实现的，而是通过条件注解来实现的，这是Spring4.x提供的新特性。</p>
+<h2 id="Spring-Boot-优缺点"><a href="#Spring-Boot-优缺点" class="headerlink" title="Spring Boot 优缺点"></a>Spring Boot 优缺点</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><ul>
+<li>快速构建项目。</li>
+<li>对主流开发框架的无配置集成。</li>
+<li>项目可独立运行，无须外部依赖Servlet容器。<br>-提供运行时的应用监控。</li>
+<li>极大的提高了开发、部署效率。</li>
+<li><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4NjQ1NDkyNQ==&mid=2247496388&idx=2&sn=cb9faa917a02478488847bfceaae4eb9&chksm=fdf9b026ca8e3930891a555171ceda1465e5e0fc02385b6671ce40131fa2389c0d3e612af7a0&scene=21#wechat_redirect">与云计算的天然集成。</a></li>
+</ul>
+<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+<li>如果你不认同spring框架，也许这就是缺点。</li>
+</ul>
+<h2 id="Spring-Boot特性"><a href="#Spring-Boot特性" class="headerlink" title="Spring Boot特性"></a>Spring Boot特性</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4NjQ1NDkyNQ==&mid=2247496388&idx=2&sn=cb9faa917a02478488847bfceaae4eb9&chksm=fdf9b026ca8e3930891a555171ceda1465e5e0fc02385b6671ce40131fa2389c0d3e612af7a0&scene=21#wechat_redirect">创建独立的Spring项目</a></li>
+<li><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4NjQ1NDkyNQ==&mid=2247496388&idx=2&sn=cb9faa917a02478488847bfceaae4eb9&chksm=fdf9b026ca8e3930891a555171ceda1465e5e0fc02385b6671ce40131fa2389c0d3e612af7a0&scene=21#wechat_redirect">内置Tomcat和Jetty容器</a></li>
+<li><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4NjQ1NDkyNQ==&mid=2247496388&idx=2&sn=cb9faa917a02478488847bfceaae4eb9&chksm=fdf9b026ca8e3930891a555171ceda1465e5e0fc02385b6671ce40131fa2389c0d3e612af7a0&scene=21#wechat_redirect">提供一个starter POMs来简化Maven配置</a></li>
+<li><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4NjQ1NDkyNQ==&mid=2247496388&idx=2&sn=cb9faa917a02478488847bfceaae4eb9&chksm=fdf9b026ca8e3930891a555171ceda1465e5e0fc02385b6671ce40131fa2389c0d3e612af7a0&scene=21#wechat_redirect">提供了一系列大型项目中常见的非功能性特性，如安全、指标，健康检测、外部配置等</a></li>
+<li><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU4NjQ1NDkyNQ==&mid=2247496388&idx=2&sn=cb9faa917a02478488847bfceaae4eb9&chksm=fdf9b026ca8e3930891a555171ceda1465e5e0fc02385b6671ce40131fa2389c0d3e612af7a0&scene=21#wechat_redirect">完全没有代码生成和xml配置文件</a></li>
+</ul>
+<h2 id="Spring-Boot-CLI"><a href="#Spring-Boot-CLI" class="headerlink" title="Spring Boot CLI"></a>Spring Boot CLI</h2><p>SpringBoot CLI 是SpringBoot提供的控制台命令工具。</p>
+<h2 id="Spring-Boot-maven-构建项目"><a href="#Spring-Boot-maven-构建项目" class="headerlink" title="Spring Boot maven 构建项目"></a>Spring Boot maven 构建项目</h2><p>spring-boot-starter-parent：是一个特殊Start，它用来提供相关的Maven依赖项，使用它之后，常用的包依赖可以省去version标签。</p>
+<h2 id="Spring-Boot几个常用的注解"><a href="#Spring-Boot几个常用的注解" class="headerlink" title="Spring Boot几个常用的注解"></a>Spring Boot几个常用的注解</h2><p>（1）@RestController和@Controller指定一个类，作为控制器的注解 ，并说明其区别</p>
+<p>（2）@RequestMapping方法级别的映射注解，这一个用过Spring MVC的小伙伴相信都很熟悉 </p>
+<p>（3）@EnableAutoConfiguration和@SpringBootApplication是类级别的注解，根据maven依赖的jar来自动猜测完成正确的spring的对应配置，只要引入了spring-boot-starter-web的依赖，默认会自动配置Spring MVC和tomcat容器</p>
+<p>（4）@Configuration类级别的注解，一般这个注解，我们用来标识main方法所在的类,完成元数据bean的初始化。</p>
+<p>（5）@ComponentScan类级别的注解，自动扫描加载所有的Spring组件包括Bean注入，一般用在main方法所在的类上 </p>
+<p>（6）@ImportResource类级别注解，当我们必须使用一个xml的配置时，使用@ImportResource和@Configuration来标识这个文件资源的类。 </p>
+<p>（7）@Autowired注解，一般结合@ComponentScan注解，来自动注入一个Service或Dao级别的Bean</p>
+<p>（8）@Component类级别注解，用来标识一个组件，比如我自定了一个filter，则需要此注解标识之后，Spring Boot才会正确识别。</p>
+<p>spring boot是如何管理事务的？直接写@transactional注解就行，在方法就是方法事务，类上就是类事务。</p>
+<p>原作者：lizmit</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35216516">https://blog.csdn.net/qq_35216516</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/01/SpringBoot%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E4%BA%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java基础之方法详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
